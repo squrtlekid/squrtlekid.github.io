@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<link href="css/if.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<h1>Some Memorable Movies</h1>
+<h3><span class="ital">SK8</span>(Joe "Terry" O'Keefe 2023)</h3>
+
+<div class="sideBySide"> 
+<img class="filmStill" onClick="onClick_Morb_img01()" src="images/skate_1.jpeg" alt="skate">
+<img class="filmStill" onClick="onClick_morb_img02()" src="images/skate_2.jpg" alt="skate">
+<img class="filmStill" onClick="onClick_morb_img03()" src="images/skate_3.jpg" alt="stake">
+</div>
+<p class= "filmInfo" id="Morb_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim perspiciatis quae explicabo earum voluptates qui repudiandae, debitis, incidunt ea eligendi, maxime dolorem tempora? Nemo perspiciatis eos soluta ipsum illo ducimus quod officia deserunt praesentium tenetur omnis libero, quibusdam explicabo non architecto quia, harum vel totam fugit voluptatibus. Debitis illo, doloremque.</p>
+
+	
+<button type="button" onClick="letssk8()" id="letssk8_btn">lets SK8</button>
+
+</body>
+<script>
+
+var letssk8_btn = document.getElementById("letssk8_btn");
+letssk8_btn.style.visibility = "hidden";
+var img_01clicked = false;
+var img02_clicked = false
+var img03_clicked = false
+	
+//Its Morbin Time*************************************************
+
+var Morb_text = document.getElementById("Morb_text");
+var Morb00 = "SK8 was originally a funny kind of mockumentary Connor and I came up with. We wrote it for animation class but decided it would work better in live action. After trying to adapt the script we wanted to go into a more documentary style on the film and it worked way better. With interviews obviously about skating and the life of a person who skates. Along with this, I was able to make my music for the project which was a fun test of skill along with sequencing and editing.";
+
+var Morb01 = "This shot takes place in the first act of the film. When we meet Connor we see him attempt a trick he seemingly keeps failing. At the end of the ark, he lands the trick and the film is underway. Intercut with interviews and music I produced it felt like a man with many hats. From the director, music producer, and even a cinematographer I loved having the agency to make the decisions I wanted with the vision I had. "
+
+var morb02 = "I'd have to say that my favorite part of making this film was filming the motions of a skateboard. Trying to be creative with the way I could utilize a skateboard was a lot of fun and a unique challenge that I took with pride. Regardless of whether it worked or not, I loved the creative process. Creating a wide enough frame to encompass everything was a great challenge for me as someone who isn't savvy with a camera."
+
+var morb03 = "For the third shot, I overlayed multiple Connor's and made them look like ghosts. I think the technique had the effect I was going for by making all past attempts ghosts of the past until the end of the shot where they all combine into one person as he lands the trick. I thought it was cool. "
+
+//MILE MILE MILE MILE MILE MILE MILE MILE 8X
+
+Morb_text.innerHTML = Morb00;
+
+function onClick_Morb_img01(){
+	Morb_text.innerHTML = Morb01
+	img01_clicked = true
+	console.log ("img01_clicked= " + img01_clicked)
+	revealButton();
+}
+	
+function onClick_morb_img02(){
+	Morb_text.innerHTML = morb02
+	img02_clicked = true
+	console.log ("img02_clicked= " + img02_clicked)
+	revealButton()
+}
+	
+function revealButton(){
+	if (img01_clicked && img02_clicked && img03_clicked){
+		console.log ("REVEAL BUTTON");
+		letssk8_btn.style.visibility = "visible";
+	}
+}
+function onClick_morb_img03(){
+	Morb_text.innerHTML = morb03
+	img03_clicked = true
+	console.log ("img03_clicked= " + img03_clicked)
+	revealButton()
+}
+	
+function letssk8(){
+	window.open("https://www.youtube.com/watch?v=nB0I8fr0eL8","_blank");
+}
+	
+</script>
+</html>
